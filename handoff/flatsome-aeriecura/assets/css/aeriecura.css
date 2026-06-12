@@ -1,0 +1,6 @@
+/* AerieCura — Flatsome edition (wrapper)
+ *
+ * tokens.css en aeriecura-core.css worden direct ge-enqueued in functions.php.
+ * Dit bestand is bewust leeg en bedoeld voor latere site-specifieke overrides
+ * (laadt ná aeriecura-core, dus alles wat hier staat wint).
+ */

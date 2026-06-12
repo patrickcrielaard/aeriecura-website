@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  AerieCura — demo content (WXR)
+  Importeer via WP-admin → Tools → Import → WordPress.
+  Vereist: WordPress Importer plugin (gratis).
+-->
+<rss version="2.0"
+    xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
+    xmlns:content="http://purl.org/rss/1.0/modules/content/"
+    xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:wp="http://wordpress.org/export/1.2/">
+<channel>
+    <title>AerieCura</title>
+    <link>https://example.com</link>
+    <description>AerieCura demo content</description>
+    <pubDate>Sun, 24 May 2026 12:00:00 +0000</pubDate>
+    <language>nl-NL</language>
+    <wp:wxr_version>1.2</wp:wxr_version>
+    <wp:base_site_url>https://example.com</wp:base_site_url>
+    <wp:base_blog_url>https://example.com</wp:base_blog_url>
+
+    <wp:author>
+        <wp:author_id>1</wp:author_id>
+        <wp:author_login><![CDATA[admin]]></wp:author_login>
+        <wp:author_email><![CDATA[admin@example.com]]></wp:author_email>
+        <wp:author_display_name><![CDATA[AerieCura]]></wp:author_display_name>
+    </wp:author>
+
+    <!-- ============================================================
+         Page: Home  (set as front page in Settings → Reading)
+         ============================================================ -->
+    <item>
+        <title>Home</title>
+        <link>/</link>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[[aeriecura_hero variant="a"]
+
+[aeriecura_trust_strip]
+
+[aeriecura_categories]
+
+[aeriecura_value_props bg="alt"]
+
+[aeriecura_stats]
+
+[aeriecura_cta_band]]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>1001</wp:post_id>
+        <wp:post_date><![CDATA[2026-05-24 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-05-24 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[home]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>0</wp:menu_order>
+        <wp:post_type><![CDATA[page]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <!-- ============================================================
+         Page: Over ons (slug: over)
+         ============================================================ -->
+    <item>
+        <title>Over ons</title>
+        <link>/over/</link>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[[aeriecura_page_header eyebrow="Wie we zijn" title="Een gespecialiseerde groothandel met diepgang." subtitle="AerieCura is bewust klein gehouden. We kennen onze producten, onze leveranciers en onze klanten persoonlijk — dat is wat ons onderscheidt van de grote algemene medische groothandels." crumb="Over ons"]
+
+[ux_html]
+<section class="section">
+  <div class="shell">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">Missie</span>
+        <h2>Zorginstellingen ontzorgen, niet overweldigen.</h2>
+        <p>Wij geloven dat een goede medische groothandel meer is dan een logistieke partij. We zijn een verlengstuk van uw inkoop- en kwaliteitsafdeling — we doen het voorwerk in productselectie, documentatie en MDR-conformiteit, zodat u zich kunt richten op de zorg.</p>
+        <p>Onze keuze om specialistisch te blijven (vijf categorieën, niet vijftig) betekent dat onze productexperts diepgaande kennis kunnen opbouwen. We weten precies welke bloeddrukmeter geschikt is voor de huisartsenpraktijk, en welke voor de afdeling cardiologie.</p>
+      </div>
+      <aside class="about-side">
+        <h3>Waar we voor staan</h3>
+        <ul>
+          <li>✓ Diepgang boven breedte</li>
+          <li>✓ Transparante prijzen</li>
+          <li>✓ MDR vóór alles</li>
+          <li>✓ Persoonlijk contact, geen helpdesk-flow</li>
+          <li>✓ Langdurige leveranciersrelaties</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Tijdlijn</span>
+        <h2>Twaalf jaar specialiseren.</h2>
+      </div>
+      <p class="lead">Geleidelijke groei, bewuste keuzes. Geen acquisities — gewoon vakmanschap.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-year">2013</div>
+        <div><h4>Start in Reeuwijk</h4><p>AerieCura begint als specialistische distributeur van bloeddrukmeters voor huisartsenpraktijken.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2016</div>
+        <div><h4>Uitbreiding assortiment</h4><p>Thermometers, saturatiemeters en weegschalen worden toegevoegd aan het kernpakket.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2019</div>
+        <div><h4>ISO 13485 certificering</h4><p>Het kwaliteitssysteem voor medische hulpmiddelen wordt formeel geaccrediteerd.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2021</div>
+        <div><h4>MDR-implementatie</h4><p>Alle leveranciers worden opnieuw beoordeeld tegen de Europese MDR-verordening.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">2024</div>
+        <div><h4>340+ zorginstellingen</h4><p>Van regionale huisartsenposten tot academische ziekenhuizen — AerieCura levert dagelijks aan de hele zorgketen.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+[/ux_html]
+
+[aeriecura_stats]
+
+[aeriecura_cta_band]]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>1002</wp:post_id>
+        <wp:post_date><![CDATA[2026-05-24 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-05-24 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[over]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>20</wp:menu_order>
+        <wp:post_type><![CDATA[page]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <!-- ============================================================
+         Page: Voor zorgverleners (slug: voor-zorgverleners)
+         ============================================================ -->
+    <item>
+        <title>Voor zorgverleners</title>
+        <link>/voor-zorgverleners/</link>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[[ux_html]
+<section class="b2b-hero">
+  <div class="shell">
+    <div class="b2b-hero-inner">
+      <div>
+        <div class="b2b-status"><span class="dot"></span>In ontwikkeling — pilot Q3</div>
+        <h1>Een B2B-portaal voor uw inkoopafdeling.</h1>
+        <p class="lead">We bouwen een platform waar uw inkopers contractprijzen zien, bestellingen plaatsen en compliance-documentatie downloaden — zonder telkens te bellen of mailen.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="/contact/?onderwerp=pilot">Aanmelden voor de pilot →</a>
+          <a class="btn btn-ghost btn-lg" href="/contact/">Vraag een demo aan</a>
+        </div>
+      </div>
+      <div class="b2b-mock" aria-hidden="true">
+        <div class="b2b-mock-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="b2b-mock-body">
+          <div class="b2b-mock-row">
+            <div class="b2b-mock-stat"><div class="num">€ 8.420</div><div class="lbl">Open order</div></div>
+            <div class="b2b-mock-stat"><div class="num">14</div><div class="lbl">Artikelen</div></div>
+            <div class="b2b-mock-stat"><div class="num">24u</div><div class="lbl">Levering</div></div>
+          </div>
+          <div class="b2b-mock-line"><span class="ico">♥</span><span>Bloeddrukmeter BP-1860</span><span class="num">BP-1860</span><span class="qty">× 12</span></div>
+          <div class="b2b-mock-line"><span class="ico">🌡</span><span>Tympaanthermometer TM-2410</span><span class="num">TM-2410</span><span class="qty">× 8</span></div>
+          <div class="b2b-mock-line"><span class="ico">○</span><span>Saturatiemeter SO-110</span><span class="num">SO-110</span><span class="qty">× 20</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Wat u krijgt</span>
+        <h2>Drie dingen die het verschil maken.</h2>
+      </div>
+      <p class="lead">Praktische functionaliteit, geen featureoverkill. Gebouwd samen met onze grootste afnemers.</p>
+    </div>
+    <div class="b2b-features">
+      <div class="value-card">
+        <span class="value-card-icon">📋</span>
+        <h3>Contractprijzen op uw account</h3>
+        <p>Geen handmatige offertes meer. Uw staffelprijzen zijn direct zichtbaar in het portaal.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card-icon">🚚</span>
+        <h3>Bestelling herhalen in één klik</h3>
+        <p>Veelbestelde artikelen blijven bewaard. Maandelijkse leveringen kunt u automatiseren.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card-icon">📄</span>
+        <h3>Documentatie direct downloaden</h3>
+        <p>CE-verklaringen, IFU's en MDR-classificatie per artikel — altijd actueel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="shell shell-narrow" style="text-align:center;">
+    <span class="eyebrow">Doe mee</span>
+    <h2>Word een van de eerste vijf pilot-klanten.</h2>
+    <p class="lead" style="margin: 16px auto 32px;">In ruil voor uw feedback krijgt u zes maanden gratis toegang en denken we mee over uw inkoopproces. Beperkt tot vijf zorginstellingen.</p>
+    <a class="btn btn-primary btn-lg" href="/contact/?onderwerp=pilot">Aanmelden voor de pilot →</a>
+  </div>
+</section>
+[/ux_html]]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>1003</wp:post_id>
+        <wp:post_date><![CDATA[2026-05-24 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-05-24 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[voor-zorgverleners]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>30</wp:menu_order>
+        <wp:post_type><![CDATA[page]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <!-- ============================================================
+         Page: Contact (slug: contact)
+         ============================================================ -->
+    <item>
+        <title>Contact</title>
+        <link>/contact/</link>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[[aeriecura_page_header eyebrow="Neem contact op" title="We denken graag mee." subtitle="Vragen over productselectie, een offerte op maat, of een afspraak met een productexpert? Stuur een bericht of bel direct." crumb="Contact"]
+
+[ux_html]
+<section class="section">
+  <div class="shell">
+    <div class="contact-grid">
+      [aeriecura_contact_info]
+      <div class="contact-form">
+        <p class="muted" style="font-size:13.5px;margin:0 0 8px;"><strong>Vervang dit blok</strong> met de shortcode van uw contactformulier-plugin (WPForms, Contact Form 7, Gravity Forms). De wrapper-class <code>contact-form</code> blijft hetzelfde — de styling klopt dan automatisch.</p>
+        <p>Voorbeeld:</p>
+        <p><code>[wpforms id="123"]</code></p>
+        <a class="btn btn-primary btn-md" href="mailto:info@aeriecura.nl">Stuur ondertussen een e-mail →</a>
+      </div>
+    </div>
+  </div>
+</section>
+[/ux_html]
+
+[aeriecura_cta_band]]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>1004</wp:post_id>
+        <wp:post_date><![CDATA[2026-05-24 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-05-24 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[contact]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>50</wp:menu_order>
+        <wp:post_type><![CDATA[page]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <!-- ============================================================
+         Page: Nieuws (slug: nieuws) — wordt later "Posts page"
+         ============================================================ -->
+    <item>
+        <title>Nieuws</title>
+        <link>/nieuws/</link>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[]]></content:encoded>
+        <excerpt:encoded><![CDATA[]]></excerpt:encoded>
+        <wp:post_id>1005</wp:post_id>
+        <wp:post_date><![CDATA[2026-05-24 12:00:00]]></wp:post_date>
+        <wp:post_date_gmt><![CDATA[2026-05-24 12:00:00]]></wp:post_date_gmt>
+        <wp:comment_status><![CDATA[closed]]></wp:comment_status>
+        <wp:ping_status><![CDATA[closed]]></wp:ping_status>
+        <wp:post_name><![CDATA[nieuws]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:post_parent>0</wp:post_parent>
+        <wp:menu_order>40</wp:menu_order>
+        <wp:post_type><![CDATA[page]]></wp:post_type>
+        <wp:post_password><![CDATA[]]></wp:post_password>
+        <wp:is_sticky>0</wp:is_sticky>
+    </item>
+
+    <!-- ============================================================
+         Productcategorieën — 5 records met basis-content
+         ============================================================ -->
+    <item>
+        <title>Bloeddrukmeters</title>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[<p>Klinisch gevalideerde manuele en automatische bloeddrukmeters voor huisartsenpraktijken, ziekenhuisafdelingen en thuiszorg. Alle modellen MDR-conform en geleverd met de bijbehorende CE-verklaring.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Klinisch gevalideerde manuele en automatische metingen.]]></excerpt:encoded>
+        <wp:post_id>2001</wp:post_id>
+        <wp:post_name><![CDATA[bloeddrukmeters]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:menu_order>10</wp:menu_order>
+        <wp:post_type><![CDATA[productcategorie]]></wp:post_type>
+        <wp:postmeta><wp:meta_key><![CDATA[icon]]></wp:meta_key><wp:meta_value><![CDATA[heart-pulse]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[short_desc]]></wp:meta_key><wp:meta_value><![CDATA[Klinisch gevalideerde manuele en automatische metingen.]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[item_count]]></wp:meta_key><wp:meta_value><![CDATA[42]]></wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>Thermometers</title>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[<p>Tympaan-, contactloze en kerntemperatuur-thermometers. Hoge precisie (±0.2°C) voor klinische omgevingen, met optioneel digitale dataopslag.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Tympaan, contactloos en kerntemperatuur.]]></excerpt:encoded>
+        <wp:post_id>2002</wp:post_id>
+        <wp:post_name><![CDATA[thermometers]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:menu_order>20</wp:menu_order>
+        <wp:post_type><![CDATA[productcategorie]]></wp:post_type>
+        <wp:postmeta><wp:meta_key><![CDATA[icon]]></wp:meta_key><wp:meta_value><![CDATA[thermometer]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[short_desc]]></wp:meta_key><wp:meta_value><![CDATA[Tympaan, contactloos en kerntemperatuur.]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[item_count]]></wp:meta_key><wp:meta_value><![CDATA[18]]></wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>Saturatiemeters</title>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[<p>Pulse-oximetrie voor zuurstofverzadiging (SpO₂) en hartslagmonitoring. Vinger-, handpalm- en stationaire varianten — voor screening en continue monitoring.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Pulse-oximetrie voor screening en monitoring.]]></excerpt:encoded>
+        <wp:post_id>2003</wp:post_id>
+        <wp:post_name><![CDATA[saturatiemeters]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:menu_order>30</wp:menu_order>
+        <wp:post_type><![CDATA[productcategorie]]></wp:post_type>
+        <wp:postmeta><wp:meta_key><![CDATA[icon]]></wp:meta_key><wp:meta_value><![CDATA[wind]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[short_desc]]></wp:meta_key><wp:meta_value><![CDATA[Pulse-oximetrie voor screening en monitoring.]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[item_count]]></wp:meta_key><wp:meta_value><![CDATA[12]]></wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>ECG-apparatuur</title>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[<p>12-leads klinische ECG-apparatuur en draagbare event recorders. Voor cardiologie-afdelingen, eerstelijnsdiagnostiek en thuismonitoring.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[12-leads klinisch en draagbare event recorders.]]></excerpt:encoded>
+        <wp:post_id>2004</wp:post_id>
+        <wp:post_name><![CDATA[ecg]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:menu_order>40</wp:menu_order>
+        <wp:post_type><![CDATA[productcategorie]]></wp:post_type>
+        <wp:postmeta><wp:meta_key><![CDATA[icon]]></wp:meta_key><wp:meta_value><![CDATA[activity]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[short_desc]]></wp:meta_key><wp:meta_value><![CDATA[12-leads klinisch en draagbare event recorders.]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[item_count]]></wp:meta_key><wp:meta_value><![CDATA[9]]></wp:meta_value></wp:postmeta>
+    </item>
+
+    <item>
+        <title>Weegschalen</title>
+        <dc:creator><![CDATA[admin]]></dc:creator>
+        <content:encoded><![CDATA[<p>Personen-, baby- en bedweegschalen — alle modellen gevalideerd voor klinisch gebruik. Met optionele integratie naar uw EPD-systeem.</p>]]></content:encoded>
+        <excerpt:encoded><![CDATA[Personen-, baby- en bedweegschalen — gevalideerd.]]></excerpt:encoded>
+        <wp:post_id>2005</wp:post_id>
+        <wp:post_name><![CDATA[weegschalen]]></wp:post_name>
+        <wp:status><![CDATA[publish]]></wp:status>
+        <wp:menu_order>50</wp:menu_order>
+        <wp:post_type><![CDATA[productcategorie]]></wp:post_type>
+        <wp:postmeta><wp:meta_key><![CDATA[icon]]></wp:meta_key><wp:meta_value><![CDATA[scale]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[short_desc]]></wp:meta_key><wp:meta_value><![CDATA[Personen-, baby- en bedweegschalen — gevalideerd.]]></wp:meta_value></wp:postmeta>
+        <wp:postmeta><wp:meta_key><![CDATA[item_count]]></wp:meta_key><wp:meta_value><![CDATA[14]]></wp:meta_value></wp:postmeta>
+    </item>
+
+</channel>
+</rss>
