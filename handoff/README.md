@@ -18,6 +18,12 @@ Dit pakket bevat alles wat nodig is om het HTML-prototype van AerieCura te verta
 2. Installeer **flatsome-aeriecura/** als child theme (zie eigen README)
 3. Werk daarna pagina voor pagina met **FLATSOME-MAPPING.md** ernaast
 
+## Deployen vanaf GitHub
+
+Wijzigingen vanaf deze repo naar de live site brengen gaat via WP Pusher —
+zie **[`DEPLOY.md`](../DEPLOY.md)** in de repo-root voor de eenmalige opzet en
+de dagelijkse "Update now"-flow.
+
 ## Voor Claude Code
 
 Beste prompt om mee te beginnen:
