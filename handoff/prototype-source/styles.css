@@ -1,4 +1,4 @@
-/* tokens imported by wrapper aeriecura.css */
+@import url("assets/colors_and_type.css");
 
 /* =========================================================================
    AerieCura — corporate website
@@ -414,6 +414,59 @@ body {
 .value-card p { font-size: 15px; line-height: 1.6; color: var(--fg-2); margin: 0; }
 @media (max-width: 880px) { .values-grid { grid-template-columns: 1fr; gap: 28px; } }
 
+/* ---- MDR document list ----------------------------------------------- */
+.mdr-doclist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.mdr-doc-row {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 22px 24px;
+  background: var(--ac-surface);
+  border: 1px solid var(--ac-line);
+  border-radius: var(--r-lg);
+  transition: box-shadow var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+}
+.mdr-doc-row:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+.mdr-doc-icon {
+  width: 44px; height: 44px; flex-shrink: 0; border-radius: var(--r-md);
+  background: var(--ac-pastel-tint); color: var(--ac-blue);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.mdr-doc-title { font-size: 16px; font-weight: 600; color: var(--ac-blue-800); margin-bottom: 4px; }
+.mdr-doc-desc { font-size: 14.5px; line-height: 1.55; color: var(--fg-2); }
+@media (max-width: 880px) { .mdr-doclist { grid-template-columns: 1fr; } }
+
+/* ---- Webshops -------------------------------------------------------- */
+.shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.shop-card {
+  display: flex; flex-direction: column; gap: 16px;
+  padding: 28px;
+  background: var(--ac-surface);
+  border: 1px solid var(--ac-line);
+  border-radius: var(--r-lg);
+  transition: box-shadow var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
+}
+.shop-card:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
+.shop-card-top { display: flex; align-items: flex-start; gap: 16px; }
+.shop-card-icon {
+  width: 52px; height: 52px; flex-shrink: 0; border-radius: var(--r-md);
+  background: var(--ac-pastel); color: var(--ac-blue-800);
+  display: inline-flex; align-items: center; justify-content: center;
+}
+.shop-card-name { font-size: 19px; font-weight: 700; color: var(--ac-blue-800); margin: 0; }
+.shop-card-domain { font-size: 13px; color: var(--ac-blue); font-family: var(--font-mono); margin-top: 3px; }
+.shop-card-desc { font-size: 15px; line-height: 1.6; color: var(--fg-2); margin: 0; flex: 1; }
+.shop-card-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 4px; border-top: 1px solid var(--ac-line-soft); margin-top: 4px; }
+.shop-status { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: var(--r-pill); }
+.shop-status .dot { width: 7px; height: 7px; border-radius: 50%; }
+.shop-status.is-live { background: var(--ac-success-bg); color: var(--ac-success); }
+.shop-status.is-live .dot { background: var(--ac-success); }
+.shop-status.is-soon { background: var(--ac-info-bg); color: var(--ac-info); }
+.shop-status.is-soon .dot { background: var(--ac-info); }
+.shop-card-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--ac-blue); text-decoration: none; }
+.shop-card-link:hover { color: var(--ac-blue-700); text-decoration: underline; text-underline-offset: 3px; }
+.shop-card-link.is-muted { color: var(--fg-3); cursor: default; }
+.shop-card-link.is-muted:hover { text-decoration: none; }
+@media (max-width: 880px) { .shop-grid { grid-template-columns: 1fr; } }
+
 /* ---- Stats / certs --------------------------------------------------- */
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--ac-line); border-radius: var(--r-lg); overflow: hidden; }
 .stat-cell { padding: 32px; border-right: 1px solid var(--ac-line); background: var(--ac-surface); }
@@ -714,56 +767,3 @@ body {
 .row { display: flex; gap: 16px; align-items: center; }
 .fade-in { animation: fadeIn 240ms var(--ease-out); }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-
-/* ---- MDR document list (v1.1) --------------------------------------- */
-.mdr-doclist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.mdr-doc-row {
-  display: flex; gap: 16px; align-items: flex-start;
-  padding: 22px 24px;
-  background: var(--ac-surface);
-  border: 1px solid var(--ac-line);
-  border-radius: var(--r-lg);
-  transition: box-shadow var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
-}
-.mdr-doc-row:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
-.mdr-doc-icon {
-  width: 44px; height: 44px; flex-shrink: 0; border-radius: var(--r-md);
-  background: var(--ac-pastel-tint); color: var(--ac-blue);
-  display: inline-flex; align-items: center; justify-content: center;
-}
-.mdr-doc-title { font-size: 16px; font-weight: 600; color: var(--ac-blue-800); margin-bottom: 4px; }
-.mdr-doc-desc { font-size: 14.5px; line-height: 1.55; color: var(--fg-2); }
-@media (max-width: 880px) { .mdr-doclist { grid-template-columns: 1fr; } }
-
-/* ---- Webshops (v1.1) ------------------------------------------------ */
-.shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
-.shop-card {
-  display: flex; flex-direction: column; gap: 16px;
-  padding: 28px;
-  background: var(--ac-surface);
-  border: 1px solid var(--ac-line);
-  border-radius: var(--r-lg);
-  transition: box-shadow var(--dur-2) var(--ease-out), transform var(--dur-2) var(--ease-out);
-}
-.shop-card:hover { box-shadow: var(--shadow-2); transform: translateY(-2px); }
-.shop-card-top { display: flex; align-items: flex-start; gap: 16px; }
-.shop-card-icon {
-  width: 52px; height: 52px; flex-shrink: 0; border-radius: var(--r-md);
-  background: var(--ac-pastel); color: var(--ac-blue-800);
-  display: inline-flex; align-items: center; justify-content: center;
-}
-.shop-card-name { font-size: 19px; font-weight: 700; color: var(--ac-blue-800); margin: 0; }
-.shop-card-domain { font-size: 13px; color: var(--ac-blue); font-family: var(--font-mono); margin-top: 3px; }
-.shop-card-desc { font-size: 15px; line-height: 1.6; color: var(--fg-2); margin: 0; flex: 1; }
-.shop-card-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 4px; border-top: 1px solid var(--ac-line-soft); margin-top: 4px; }
-.shop-status { display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: var(--r-pill); }
-.shop-status .dot { width: 7px; height: 7px; border-radius: 50%; }
-.shop-status.is-live { background: var(--ac-success-bg); color: var(--ac-success); }
-.shop-status.is-live .dot { background: var(--ac-success); }
-.shop-status.is-soon { background: var(--ac-info-bg); color: var(--ac-info); }
-.shop-status.is-soon .dot { background: var(--ac-info); }
-.shop-card-link { display: inline-flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 600; color: var(--ac-blue); text-decoration: none; }
-.shop-card-link:hover { color: var(--ac-blue-700); text-decoration: underline; text-underline-offset: 3px; }
-.shop-card-link.is-muted { color: var(--fg-3); cursor: default; }
-.shop-card-link.is-muted:hover { text-decoration: none; }
-@media (max-width: 880px) { .shop-grid { grid-template-columns: 1fr; } }

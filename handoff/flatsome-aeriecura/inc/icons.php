@@ -15,6 +15,7 @@ defined( 'ABSPATH' ) || exit;
 function aeriecura_icon_paths() : array {
     return [
         'heart-pulse'  => '<path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><path d="M3.22 12h6.78l1-3 2 6 1-3h6.78"/>',
+        'droplet'      => '<path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>',
         'thermometer'  => '<path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>',
         'wind'         => '<path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"/><path d="M9.6 4.6A2 2 0 1 1 11 8H2"/><path d="M12.6 19.4A2 2 0 1 0 14 16H2"/>',
         'activity'     => '<polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>',

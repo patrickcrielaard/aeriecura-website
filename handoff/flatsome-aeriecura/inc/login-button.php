@@ -14,20 +14,17 @@
 defined( 'ABSPATH' ) || exit;
 
 function aeriecura_login_link() : void {
-    $url   = apply_filters( 'aeriecura_login_url',   wp_login_url( home_url() ) );
+    // Wijst naar het externe B2B-portaal (opent in nieuw tabblad). De
+    // toekomstige aeriecura-admin plugin kan URL/label/icoon nog steeds via
+    // deze filters overschrijven — geen aanpassing aan het theme nodig.
+    $url   = apply_filters( 'aeriecura_login_url',   'https://b2b.aeriecura.nl' );
     $label = apply_filters( 'aeriecura_login_label', __( 'Inloggen', 'aeriecura' ) );
     $icon  = apply_filters( 'aeriecura_login_icon',  'lock' );
 
-    if ( is_user_logged_in() ) {
-        $url   = apply_filters( 'aeriecura_logged_in_url',   admin_url() );
-        $label = apply_filters( 'aeriecura_logged_in_label', __( 'Mijn account', 'aeriecura' ) );
-        $icon  = apply_filters( 'aeriecura_logged_in_icon',  'user' );
-    }
-
     printf(
-        '<a class="login-link" href="%s" title="%s">%s<span>%s</span></a>',
+        '<a class="login-link" href="%s" title="%s" target="_blank" rel="noopener">%s<span>%s</span></a>',
         esc_url( $url ),
-        esc_attr__( 'Inloggen op het beheer', 'aeriecura' ),
+        esc_attr__( 'Naar het B2B-portaal', 'aeriecura' ),
         aeriecura_icon_html( $icon, 13 ),
         esc_html( $label )
     );

@@ -31,6 +31,7 @@ add_action( 'acf/init', function () {
                 'type'          => 'select',
                 'choices'       => [
                     'heart-pulse'  => 'heart-pulse',
+                    'droplet'      => 'droplet',
                     'thermometer'  => 'thermometer',
                     'wind'         => 'wind',
                     'activity'     => 'activity',
