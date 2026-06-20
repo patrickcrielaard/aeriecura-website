@@ -62,13 +62,26 @@ Bron: `handoff/wp-admin-snippets/` (zie de README daar).
 
 ## 5. Menu's  (UPDATE §9)
 
-WP-admin → **Weergave → Menu's → Primary**
+> Belangrijk: het theme heeft een eigen menulocatie **"Primair menu"**. Zolang
+> daar **geen** menu aan gekoppeld is, toont de site een vaste fallback van 6
+> items (zonder Webshops/MDR). Je wijzigingen verschijnen pas ná het koppelen.
 
-- [ ] Hernoem menu-item "Producten" → **Assortiment** (link blijft `/producten/`).
-- [ ] Voeg toe: **Webshops** → `/webshops/`.
-- [ ] Voeg toe: **MDR** → `/mdr/`.
-- [ ] Volgorde: Home · Assortiment · Webshops · Over ons · Voor zorgverleners ·
-      MDR · Nieuws · Contact.
+WP-admin → **Weergave → Menu's**
+
+- [ ] Maak een menu aan (bijv. "Hoofdmenu") — of kies een bestaand menu.
+- [ ] Voeg items toe via **Aangepaste links** (of Pagina-links zodra de pagina's
+      bestaan):
+  - Home → `/`
+  - Assortiment → `/producten/`
+  - Webshops → `/webshops/`
+  - Over ons → `/over/`
+  - Voor zorgverleners → `/voor-zorgverleners/`
+  - MDR → `/mdr/`
+  - Nieuws → `/nieuws/`
+  - Contact → `/contact/`
+- [ ] **Koppel het menu aan de locatie "Primair menu"** (Menu-instellingen →
+      Weergavelocatie, of tab "Locaties beheren") en **sla op**. ← zonder deze
+      stap blijft de fallback staan.
 - [ ] (Optioneel) footer-menu "Bedrijf": MDR-conformiteit toevoegen — of laat de
       ingebouwde fallback staan, die toont MDR al.
 
