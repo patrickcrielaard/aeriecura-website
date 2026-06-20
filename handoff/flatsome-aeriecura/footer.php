@@ -11,7 +11,6 @@ defined( 'ABSPATH' ) || exit;
 $ac_phone    = aeriecura_setting( 'aeriecura_phone',    '+31 (0)182 000 000' );
 $ac_email    = aeriecura_setting( 'aeriecura_email',    'info@aeriecura.nl' );
 $ac_kvk      = aeriecura_setting( 'aeriecura_kvk',      '12345678' );
-$ac_btw      = aeriecura_setting( 'aeriecura_btw',      'NL000000000B01' );
 $ac_addr1    = aeriecura_setting( 'aeriecura_address1', 'Industrieweg 12' );
 $ac_addr2    = aeriecura_setting( 'aeriecura_address2', '2811 NP Reeuwijk' );
 $ac_tagline  = aeriecura_setting( 'aeriecura_tagline',  __( 'Specialistische groothandel in diagnostiek- en monitoring-apparatuur voor zorgprofessionals.', 'aeriecura' ) );
@@ -40,13 +39,12 @@ $ac_webshops = aeriecura_list( 'aeriecura_webshops' );
             <p class="ac-footer-meta">
                 <?php echo esc_html( $ac_addr1 ); ?><br>
                 <?php echo esc_html( $ac_addr2 ); ?><br>
-                <?php echo esc_html__( 'KvK', 'aeriecura' ) . ' ' . esc_html( $ac_kvk ); ?><br>
-                <?php echo esc_html__( 'BTW', 'aeriecura' ) . ' ' . esc_html( $ac_btw ); ?>
+                <?php echo esc_html__( 'KvK', 'aeriecura' ) . ' ' . esc_html( $ac_kvk ); ?>
             </p>
         </div>
 
         <div class="ac-footer-col">
-            <h4 class="ac-footer-h"><?php esc_html_e( 'Producten', 'aeriecura' ); ?></h4>
+            <h4 class="ac-footer-h"><?php esc_html_e( 'Assortiment', 'aeriecura' ); ?></h4>
             <?php
             $cats = get_posts( [
                 'post_type'      => 'productcategorie',
@@ -65,11 +63,12 @@ $ac_webshops = aeriecura_list( 'aeriecura_webshops' );
                 }
             } else {
                 $fallback = [
-                    __( 'Bloeddrukmeters', 'aeriecura' ),
-                    __( 'Thermometers',    'aeriecura' ),
-                    __( 'Saturatiemeters', 'aeriecura' ),
-                    __( 'ECG-apparatuur',  'aeriecura' ),
-                    __( 'Weegschalen',     'aeriecura' ),
+                    __( 'Bloeddrukmeters',   'aeriecura' ),
+                    __( 'Bloedsuikermeters', 'aeriecura' ),
+                    __( 'Thermometers',      'aeriecura' ),
+                    __( 'Saturatiemeters',   'aeriecura' ),
+                    __( 'ECG-apparatuur',    'aeriecura' ),
+                    __( 'Weegschalen',       'aeriecura' ),
                 ];
                 foreach ( $fallback as $label ) {
                     echo '<span>' . esc_html( $label ) . '</span>';
@@ -92,6 +91,7 @@ $ac_webshops = aeriecura_list( 'aeriecura_webshops' );
             else : ?>
                 <a href="<?php echo esc_url( home_url( '/over/' ) ); ?>"><?php esc_html_e( 'Over ons', 'aeriecura' ); ?></a>
                 <a href="<?php echo esc_url( home_url( '/voor-zorgverleners/' ) ); ?>"><?php esc_html_e( 'Voor zorgverleners', 'aeriecura' ); ?></a>
+                <a href="<?php echo esc_url( home_url( '/mdr/' ) ); ?>"><?php esc_html_e( 'MDR-conformiteit', 'aeriecura' ); ?></a>
                 <a href="<?php echo esc_url( home_url( '/nieuws/' ) ); ?>"><?php esc_html_e( 'Nieuws', 'aeriecura' ); ?></a>
                 <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Contact', 'aeriecura' ); ?></a>
             <?php endif; ?>
@@ -110,7 +110,8 @@ $ac_webshops = aeriecura_list( 'aeriecura_webshops' );
 
         <div class="ac-footer-col">
             <h4 class="ac-footer-h"><?php esc_html_e( 'Beheer', 'aeriecura' ); ?></h4>
-            <a href="<?php echo esc_url( wp_login_url( home_url() ) ); ?>"><?php esc_html_e( 'Inloggen op WordPress', 'aeriecura' ); ?></a>
+            <a href="https://b2b.aeriecura.nl" target="_blank" rel="noopener"><?php esc_html_e( 'B2B-portaal', 'aeriecura' ); ?></a>
+            <a href="<?php echo esc_url( home_url( '/api/' ) ); ?>"><?php esc_html_e( 'API-documentatie', 'aeriecura' ); ?></a>
             <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Vraag een offerte aan', 'aeriecura' ); ?></a>
             <a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $ac_phone ) ); ?>"><?php echo esc_html( $ac_phone ); ?></a>
             <a href="mailto:<?php echo esc_attr( $ac_email ); ?>"><?php echo esc_html( $ac_email ); ?></a>

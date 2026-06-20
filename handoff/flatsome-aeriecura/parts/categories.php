@@ -22,17 +22,17 @@ if ( $cats ) {
             'title' => $cat->post_title,
             'desc'  => function_exists( 'get_field' ) ? ( get_field( 'short_desc', $cat->ID ) ?: $cat->post_excerpt ) : $cat->post_excerpt,
             'icon'  => function_exists( 'get_field' ) ? ( get_field( 'icon', $cat->ID ) ?: 'package' ) : 'package',
-            'count' => function_exists( 'get_field' ) ? (int) get_field( 'item_count', $cat->ID ) : 0,
             'url'   => get_permalink( $cat ),
         ];
     }
 } else {
     $rows = [
-        [ 'title' => __( 'Bloeddrukmeters', 'aeriecura' ), 'desc' => __( 'Klinisch gevalideerde manuele en automatische metingen.', 'aeriecura' ), 'icon' => 'heart-pulse', 'count' => 42, 'url' => home_url( '/producten/' ) ],
-        [ 'title' => __( 'Thermometers',    'aeriecura' ), 'desc' => __( 'Tympaan, contactloos en kerntemperatuur.',                'aeriecura' ), 'icon' => 'thermometer', 'count' => 18, 'url' => home_url( '/producten/' ) ],
-        [ 'title' => __( 'Saturatiemeters', 'aeriecura' ), 'desc' => __( 'Pulse-oximetrie voor screening en monitoring.',           'aeriecura' ), 'icon' => 'wind',        'count' => 12, 'url' => home_url( '/producten/' ) ],
-        [ 'title' => __( 'ECG-apparatuur',  'aeriecura' ), 'desc' => __( '12-leads klinisch en draagbare event recorders.',         'aeriecura' ), 'icon' => 'activity',    'count' => 9,  'url' => home_url( '/producten/' ) ],
-        [ 'title' => __( 'Weegschalen',     'aeriecura' ), 'desc' => __( 'Personen-, baby- en bedweegschalen — gevalideerd.',       'aeriecura' ), 'icon' => 'scale',       'count' => 14, 'url' => home_url( '/producten/' ) ],
+        [ 'title' => __( 'Bloeddrukmeters',   'aeriecura' ), 'desc' => __( 'Klinisch gevalideerde manuele en automatische metingen.', 'aeriecura' ), 'icon' => 'heart-pulse', 'url' => home_url( '/producten/' ) ],
+        [ 'title' => __( 'Bloedsuikermeters', 'aeriecura' ), 'desc' => __( 'Glucosemeters, teststrips en lancetten.',                  'aeriecura' ), 'icon' => 'droplet',     'url' => home_url( '/producten/' ) ],
+        [ 'title' => __( 'Thermometers',      'aeriecura' ), 'desc' => __( 'Tympaan, contactloos en kerntemperatuur.',                'aeriecura' ), 'icon' => 'thermometer', 'url' => home_url( '/producten/' ) ],
+        [ 'title' => __( 'Saturatiemeters',   'aeriecura' ), 'desc' => __( 'Pulse-oximetrie voor screening en monitoring.',           'aeriecura' ), 'icon' => 'wind',        'url' => home_url( '/producten/' ) ],
+        [ 'title' => __( 'ECG-apparatuur',    'aeriecura' ), 'desc' => __( '12-leads klinisch en draagbare event recorders.',         'aeriecura' ), 'icon' => 'activity',    'url' => home_url( '/producten/' ) ],
+        [ 'title' => __( 'Weegschalen',       'aeriecura' ), 'desc' => __( 'Personen-, baby- en bedweegschalen — gevalideerd.',       'aeriecura' ), 'icon' => 'scale',       'url' => home_url( '/producten/' ) ],
     ];
 }
 ?>
@@ -42,7 +42,7 @@ if ( $cats ) {
         <div class="section-head">
             <div>
                 <span class="eyebrow"><?php esc_html_e( 'Productcategorieën', 'aeriecura' ); ?></span>
-                <h2><?php esc_html_e( 'Vijf categorieën, één betrouwbare leverancier', 'aeriecura' ); ?></h2>
+                <h2><?php esc_html_e( 'Zes categorieën, één betrouwbare leverancier', 'aeriecura' ); ?></h2>
             </div>
             <p class="lead"><?php esc_html_e( 'Diagnostiek- en monitoring-apparatuur die past bij de werkelijke zorgpraktijk: betrouwbaar, MDR-conform en met snelle levertijden.', 'aeriecura' ); ?></p>
         </div>
@@ -57,11 +57,7 @@ if ( $cats ) {
                             <p class="cat-tile-desc"><?php echo esc_html( $r['desc'] ); ?></p>
                         <?php endif; ?>
                     </div>
-                    <?php if ( $r['count'] > 0 ) : ?>
-                        <span class="cat-tile-meta">
-                            <?php printf( esc_html( _n( '%d artikel', '%d artikelen', $r['count'], 'aeriecura' ) ), (int) $r['count'] ); ?>
-                        </span>
-                    <?php endif; ?>
+                    <span class="cat-tile-meta"><?php esc_html_e( 'MDR conform', 'aeriecura' ); ?></span>
                 </a>
             <?php endforeach; ?>
         </div>

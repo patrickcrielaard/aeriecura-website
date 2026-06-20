@@ -15,10 +15,10 @@ get_header();
         <div class="breadcrumb">
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'Home', 'aeriecura' ); ?></a>
             <span>›</span>
-            <span><?php esc_html_e( 'Producten', 'aeriecura' ); ?></span>
+            <span><?php esc_html_e( 'Assortiment', 'aeriecura' ); ?></span>
         </div>
         <span class="eyebrow"><?php esc_html_e( 'Assortiment', 'aeriecura' ); ?></span>
-        <h1><?php esc_html_e( 'Vijf categorieën — het volledige overzicht.', 'aeriecura' ); ?></h1>
+        <h1><?php esc_html_e( 'Zes categorieën — het volledige overzicht.', 'aeriecura' ); ?></h1>
         <p><?php esc_html_e( 'Ons assortiment is bewust afgebakend. Per categorie kiezen we voor diepte: meerdere klassen, meerdere prijspunten — allemaal MDR-conform en met directe levering.', 'aeriecura' ); ?></p>
     </div>
 </section>
@@ -30,7 +30,6 @@ get_header();
                 <?php while ( have_posts() ) : the_post();
                     $icon  = function_exists( 'get_field' ) ? ( get_field( 'icon' ) ?: 'package' ) : 'package';
                     $desc  = function_exists( 'get_field' ) ? get_field( 'short_desc' ) : '';
-                    $count = function_exists( 'get_field' ) ? (int) get_field( 'item_count' ) : 0;
                     $skus  = function_exists( 'get_field' ) ? get_field( 'sample_skus' ) : [];
                     if ( ! $desc ) { $desc = get_the_excerpt(); }
                     ?>
@@ -43,9 +42,7 @@ get_header();
                                     <p><?php echo esc_html( $desc ); ?></p>
                                 <?php endif; ?>
                             </div>
-                            <?php if ( $count > 0 ) : ?>
-                                <span class="cert-pill"><?php echo (int) $count; ?> <?php esc_html_e( 'artikelen', 'aeriecura' ); ?></span>
-                            <?php endif; ?>
+                            <span class="cert-pill"><?php esc_html_e( 'MDR conform', 'aeriecura' ); ?></span>
                         </div>
 
                         <?php if ( is_array( $skus ) && $skus ) : ?>
@@ -76,7 +73,7 @@ get_header();
             </div>
         <?php else : ?>
             <p class="lead">
-                <?php esc_html_e( 'Nog geen productcategorieën aangemaakt. Ga naar WP-admin → Productcategorieën → Nieuwe toevoegen om de vijf categorieën in te voeren (Bloeddrukmeters, Thermometers, Saturatiemeters, ECG-apparatuur, Weegschalen).', 'aeriecura' ); ?>
+                <?php esc_html_e( 'Nog geen productcategorieën aangemaakt. Ga naar WP-admin → Productcategorieën → Nieuwe toevoegen om de zes categorieën in te voeren (Bloeddrukmeters, Bloedsuikermeters, Thermometers, Saturatiemeters, ECG-apparatuur, Weegschalen).', 'aeriecura' ); ?>
             </p>
         <?php endif; ?>
     </div>
