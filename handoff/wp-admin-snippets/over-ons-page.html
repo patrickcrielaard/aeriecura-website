@@ -1,0 +1,264 @@
+<!--
+  AerieCura — pagina "Over ons"  (slug: over)
+  ===========================================
+  Plak dit als ÉÉN "Custom HTML"-blok (Gutenberg) of een "HTML"-element
+  (UX Builder) in de (lege) pagina "Over", met een paginabreed sjabloon.
+  Alle CSS-classes en iconen zitten in het theme; het kleine <style>-blok
+  hieronder voegt alleen wat extra's toe voor deze pagina (prefix .ov-).
+
+  Let op de slug: het theme (header + footer) linkt naar /over/. Een paar
+  menu-items in WP-admin wijzen nog naar /ons/ (geeft nu een 404) — zet die
+  in Weergave → Menu's om naar de pagina "Over".
+
+  Opbouw:
+    1. Paginakop + kerncijfers
+    2. Ons verhaal — opgericht in 2017 door Patrick Crielaard (+ citaat)
+    3. Wat we doen — groothandel, eigen webshops, Rossmax-distributie
+    4. Tijdlijn
+    5. Waar we voor staan — 6 kernwaarden
+    6. Keurmerken en partners
+    7. CTA-band
+
+  Controleer vóór publiceren: het citaat in §2 en de tijdlijn in §4 zijn een
+  voorzet. Pas de woorden en jaartallen aan naar wat écht klopt.
+-->
+
+<style>
+  .ov-stats { margin-top: 40px; }
+  .ov-stats .stat-cell { background: var(--ac-surface); }
+  .ov-founder { display: flex; flex-direction: column; gap: 20px; }
+  .ov-founder-head { display: flex; align-items: center; gap: 16px; }
+  .ov-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--ac-blue); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; letter-spacing: 0.02em; flex-shrink: 0; }
+  .ov-founder-name { font-size: 18px; font-weight: 700; color: var(--ac-blue-800); margin: 0; }
+  .ov-founder-role { font-size: 14px; color: var(--fg-3); margin: 2px 0 0; }
+  .ov-quote { margin: 0; padding: 0 0 0 18px; border-left: 3px solid var(--ac-blue); font-size: 17px; line-height: 1.6; color: var(--ac-blue-800); font-weight: 500; }
+  .ov-founder-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+  .ov-founder-meta .cert-pill { padding: 6px 12px; font-size: 12.5px; }
+  .ov-pillar { background: var(--ac-surface); border: 1px solid var(--ac-line); border-radius: var(--r-lg); padding: 28px; }
+  .ov-pillar .ov-link { margin-top: auto; padding-top: 8px; font-size: 14.5px; font-weight: 600; color: var(--ac-blue); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+  .ov-pillar .ov-link:hover { color: var(--ac-blue-700); }
+  .ov-trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 40px; }
+  .ov-trust-card { background: var(--ac-surface); border: 1px solid var(--ac-line); border-radius: var(--r-lg); padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+  .ov-trust-card svg { color: var(--ac-blue); }
+  .ov-trust-card strong { font-size: 15.5px; color: var(--ac-blue-800); }
+  .ov-trust-card span { font-size: 14px; color: var(--fg-2); line-height: 1.5; }
+  @media (max-width: 1080px) { .ov-trust { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) {
+    .ov-trust { grid-template-columns: 1fr; }
+    .timeline-row { grid-template-columns: 1fr; gap: 6px; }
+    .ov-stats .stat-cell { padding: 20px; }
+    .ov-stats .stat-num { font-size: 30px; }
+  }
+</style>
+
+<!-- 1. Paginakop + kerncijfers -->
+<section class="page-header">
+  <div class="shell">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>›</span><span>Over ons</span>
+    </div>
+    <span class="eyebrow">Over AerieCura</span>
+    <h1>Betrouwbare meetapparatuur, met persoonlijk advies.</h1>
+    <p>AerieCura is in 2017 opgericht door Patrick Crielaard. Wat begon met één webshop in bloeddrukmeters, is uitgegroeid tot een specialistische groothandel in diagnostiek- en monitoringapparatuur voor zorgprofessionals én consumenten, vanuit ons eigen magazijn in Moordrecht.</p>
+    <div class="stats-grid ov-stats">
+      <div class="stat-cell"><div class="stat-num">2017</div><div class="stat-lbl">Opgericht in Nederland</div></div>
+      <div class="stat-cell"><div class="stat-num">8</div><div class="stat-lbl">Landen als Rossmax-distributeur</div></div>
+      <div class="stat-cell"><div class="stat-num">6</div><div class="stat-lbl">Productcategorieën, bewust afgebakend</div></div>
+      <div class="stat-cell"><div class="stat-num">1</div><div class="stat-lbl">Vast aanspreekpunt per klant</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Ons verhaal -->
+<section class="section">
+  <div class="shell">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">Ons verhaal</span>
+        <h2 style="margin-top:12px;">Begonnen met één vraag: welke meter kun je écht vertrouwen?</h2>
+        <p>Wie een bloeddrukmeter zoekt, krijgt al snel tientallen modellen voorgeschoteld, maar weinig uitleg. Welke meter is klinisch gevalideerd? Past de manchet wel? En wie helpt je als er iets misgaat? Vanuit die vragen startte Patrick Crielaard in 2017 met AerieCura en de webshop Bloeddrukmeter.shop: een eerlijk, overzichtelijk aanbod met deskundig advies erbij.</p>
+        <p>Dat werkte. Steeds vaker klopten ook huisartsenpraktijken, thuiszorgorganisaties en zorginstellingen aan. Daarom bouwden we de groothandel verder uit, met een eigen magazijn, staffelprijzen, een B2B-portaal en volledige MDR-documentatie bij elke levering.</p>
+        <p>De aanpak is nog steeds dezelfde. We voeren geen eindeloos assortiment, maar kiezen apparatuur die we zelf kennen en kunnen ondersteunen. Wie belt, krijgt iemand aan de lijn die het antwoord weet.</p>
+      </div>
+      <div class="about-side ov-founder">
+        <div class="ov-founder-head">
+          <div class="ov-avatar" aria-hidden="true">PC</div>
+          <div>
+            <p class="ov-founder-name">Patrick Crielaard</p>
+            <p class="ov-founder-role">Oprichter en directeur</p>
+          </div>
+        </div>
+        <blockquote class="ov-quote">“Een meting is alleen iets waard als je erop kunt vertrouwen. Daarom leveren we niets wat we zelf niet zouden gebruiken, en blijven we bereikbaar als er vragen zijn.”</blockquote>
+        <div class="ov-founder-meta">
+          <span class="cert-pill">Opgericht 2017</span>
+          <span class="cert-pill">Moordrecht</span>
+          <span class="cert-pill">KvK 82024995</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Wat we doen -->
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-head">
+      <div><span class="eyebrow">Wat we doen</span><h2>Eén bedrijf, drie manieren om te leveren</h2></div>
+      <p class="lead">Of u nu een ziekenhuis inricht of thuis uw bloeddruk wilt meten, achter elk kanaal staan hetzelfde team, dezelfde voorraad en dezelfde kwaliteitseisen.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card ov-pillar">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M11 2a2 2 0 0 0-2 2v5H4a2 2 0 0 0-2 2v2c0 1.1.9 2 2 2h5v5c0 1.1.9 2 2 2h2a2 2 0 0 0 2-2v-5h5a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-5V4a2 2 0 0 0-2-2h-2z"/></svg></div>
+        <h3>Groothandel voor de zorg</h3>
+        <p>Bloeddrukmeters, thermometers, saturatiemeters, ECG-apparatuur en weegschalen voor ziekenhuizen, huisartsen, GGZ en thuiszorg. Met staffelprijzen en MDR-dossier.</p>
+        <a class="ov-link" href="/voor-zorgverleners/">Voor zorgverleners <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="value-card ov-pillar">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg></div>
+        <h3>Eigen webshops</h3>
+        <p>Via Bloeddrukmeter.shop helpen we consumenten aan een betrouwbare meter voor thuis, met een keuzehulp, persoonlijk advies en snelle levering.</p>
+        <a class="ov-link" href="/webshops/">Onze webshops <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="value-card ov-pillar">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div>
+        <h3>Distributie van Rossmax</h3>
+        <p>Als distributeur van Rossmax brengen we klinisch gevalideerde meetapparatuur naar zorg en retail in acht Europese landen.</p>
+        <a class="ov-link" href="https://rossmax.nl" target="_blank" rel="noopener">Naar Rossmax.nl <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Tijdlijn — controleer en vul de jaartallen aan -->
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div><span class="eyebrow">Tijdlijn</span><h2>Hoe AerieCura is gegroeid</h2></div>
+      <p class="lead">Van een webshop met een duidelijke focus naar een groothandel en distributeur voor heel Europa.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-row">
+        <div class="timeline-year">2017</div>
+        <div><h4>Oprichting door Patrick Crielaard</h4><p>Start van AerieCura en Bloeddrukmeter.shop, met een eerlijk aanbod van gevalideerde bloeddrukmeters en persoonlijk advies.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">Groei</div>
+        <div><h4>Van consument naar zorgprofessional</h4><p>Huisartsenpraktijken, thuiszorg en instellingen gaan via ons bestellen. Het assortiment breidt uit met ECG, saturatie, temperatuur en wegen.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">Europa</div>
+        <div><h4>Distributeur van Rossmax</h4><p>AerieCura wordt distributeur van Rossmax in acht Europese landen, met Rossmax.nl als Nederlandse thuisbasis.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">MDR</div>
+        <div><h4>Volledig MDR-conform assortiment</h4><p>Elk artikel voldoet aan EU 2017/745, met verklaring van overeenstemming, UDI en traceerbaarheid op partijniveau.</p></div>
+      </div>
+      <div class="timeline-row">
+        <div class="timeline-year">Nu</div>
+        <div><h4>Eigen magazijn in Moordrecht en nieuwe webshops</h4><p>Levering uit eigen voorraad, een B2B-portaal voor zorgverleners en nieuwe webshops zoals Thuismonitoring.nl in ontwikkeling.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Waar we voor staan -->
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-head">
+      <div><span class="eyebrow">Waar we voor staan</span><h2>Zes beloftes, voor iedere klant</h2></div>
+      <p class="lead">Of u nu één thermometer bestelt of een complete afdeling inricht: dit kunt u altijd van ons verwachten.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg></div>
+        <h3>Persoonlijk en deskundig advies</h3>
+        <p>Geen callcenter, maar specialisten die de apparatuur kennen. We adviseren eerlijk, ook als dat betekent dat een goedkoper model beter past.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Klinisch gevalideerd en MDR-conform</h3>
+        <p>We kiezen bij voorkeur meters die klinisch gevalideerd zijn, en leveren niets zonder geldige CE-markering en volledig dossier.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></div>
+        <h3>Uit eigen voorraad</h3>
+        <p>Ons magazijn staat in Moordrecht. Wat op voorraad is, versturen we snel, zonder tussenpersonen of drop-shipping.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Service na verkoop</h3>
+        <p>Garantie, reparatie, kalibratie en vervangende onderdelen via één lijn. Een meter moet ook over vijf jaar nog betrouwbaar meten.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Heldere prijzen</h3>
+        <p>Scherpe prijzen voor consumenten, staffel- en contractprijzen voor de zorg. Zonder kleine lettertjes.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+        <h3>Duurzaam waar het kan</h3>
+        <p>Liever repareren dan vervangen. We denken mee over levensduur, onderhoud en een tweede leven voor apparatuur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Keurmerken en partners -->
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div><span class="eyebrow">Vertrouwen</span><h2>Keurmerken en partners</h2></div>
+      <p class="lead">Kwaliteit zeggen we niet alleen, we laten het toetsen. Certificaten en kwaliteitsdocumenten zijn op aanvraag beschikbaar.</p>
+    </div>
+    <div class="ov-trust">
+      <div class="ov-trust-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        <strong>Hartstichting</strong>
+        <span>Bloeddrukmeter.shop voert meters die door de Hartstichting worden aanbevolen.</span>
+      </div>
+      <div class="ov-trust-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+        <strong>Thuiswinkel Waarborg</strong>
+        <span>Onze webshop is gecertificeerd voor veilig en betrouwbaar online kopen.</span>
+      </div>
+      <div class="ov-trust-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        <strong>Officieel Omron-dealer</strong>
+        <span>Erkend dealer met het volledige assortiment van de marktleider in bloeddruk.</span>
+      </div>
+      <div class="ov-trust-card">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+        <strong>Rossmax-distributeur</strong>
+        <span>Distributiepartner van Rossmax in acht Europese landen.</span>
+      </div>
+    </div>
+    <div class="certs-row" style="gap:12px;">
+      <span class="cert-pill">MDR EU 2017/745</span>
+      <span class="cert-pill">ISO 13485 : 2016</span>
+      <span class="cert-pill">ISO 9001 : 2015</span>
+      <span class="cert-pill">CE-gemarkeerd assortiment</span>
+      <span class="cert-pill">Farmatec geregistreerd</span>
+      <span class="cert-pill">GDP-richtlijn</span>
+      <span class="cert-pill">EUDAMED-registratie</span>
+    </div>
+    <p style="margin:24px 0 0;"><a href="/mdr/" style="font-weight:600;">Lees hoe wij MDR-conformiteit borgen →</a></p>
+  </div>
+</section>
+
+<!-- 7. Gedeelde CTA-band. Wil je dat hij meedeint met latere wijzigingen?
+     Vervang dit hele <section> dan door een los Text-element met: [aeriecura_cta_band] -->
+<section class="section">
+  <div class="shell">
+    <div class="cta-band">
+      <div>
+        <span class="eyebrow">Kennismaken</span>
+        <h2>Benieuwd wat we voor u kunnen betekenen?</h2>
+        <p>Vertel ons wat u nodig heeft. We denken graag mee en maken een vrijblijvend voorstel, met staffelprijzen, levertijden en de bijbehorende documentatie.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a class="btn btn-on-deep btn-lg" href="/contact/">Neem contact op</a>
+        <a class="btn btn-outline-deep btn-lg" href="/voor-zorgverleners/">B2B-platform</a>
+      </div>
+    </div>
+  </div>
+</section>

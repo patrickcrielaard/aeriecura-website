@@ -9,6 +9,7 @@ WordPress in een pagina te plakken.
 | `mdr-page.html` | MDR-conformiteit | `mdr` |
 | `webshops-page.html` | Webshops | `webshops` |
 | `zorgverleners-page.html` | Voor zorgverleners *(bestaande pagina — inhoud vervangen)* | `voor-zorgverleners` |
+| `over-ons-page.html` | Over ons *(bestaande lege pagina "Over" — inhoud plakken)* | `over` |
 
 ## Zo gebruik je ze
 
