@@ -111,7 +111,6 @@ $ac_webshops = aeriecura_list( 'aeriecura_webshops' );
         <div class="ac-footer-col">
             <h4 class="ac-footer-h"><?php esc_html_e( 'Beheer', 'aeriecura' ); ?></h4>
             <a href="https://b2b.aeriecura.nl" target="_blank" rel="noopener"><?php esc_html_e( 'B2B-portaal', 'aeriecura' ); ?></a>
-            <a href="<?php echo esc_url( home_url( '/api/' ) ); ?>"><?php esc_html_e( 'API-documentatie', 'aeriecura' ); ?></a>
             <a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>"><?php esc_html_e( 'Vraag een offerte aan', 'aeriecura' ); ?></a>
             <a href="tel:<?php echo esc_attr( preg_replace( '/[^0-9+]/', '', $ac_phone ) ); ?>"><?php echo esc_html( $ac_phone ); ?></a>
             <a href="mailto:<?php echo esc_attr( $ac_email ); ?>"><?php echo esc_html( $ac_email ); ?></a>

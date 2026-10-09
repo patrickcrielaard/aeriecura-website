@@ -85,13 +85,11 @@ const Footer = ({ setRoute, onLogin }) => {
           <a onClick={go("webshops")} href="#">Alle webshops</a>
           <a href="https://bloeddrukmeter.shop" target="_blank" rel="noreferrer">Bloeddrukmeter.shop</a>
           <a href="https://rossmax.nl" target="_blank" rel="noreferrer">Rossmax.nl</a>
-          <a onClick={go("webshops")} href="#">Thuismonitoring.nl</a>
           <a onClick={go("webshops")} href="#">Incontinentiemateriaal.nl</a>
         </div>
         <div className="ac-footer-col">
           <h4 className="ac-footer-h">Beheer</h4>
           <a href="https://b2b.aeriecura.nl" target="_blank" rel="noreferrer">B2B-portaal</a>
-          <a>API-documentatie</a>
         </div>
       </div>
       <div className="ac-footer-bottom">
