@@ -1,0 +1,144 @@
+<!--
+  AerieCura — pagina "Voor zorgverleners"  (slug: voor-zorgverleners)
+  ====================================================================
+  Vervangt de oude "In ontwikkeling — pilot Q3"-inhoud. Het B2B-portaal
+  staat live op https://b2b.aeriecura.nl; toegang is alleen voor bestaande
+  klanten en wordt via het contactformulier aangevraagd.
+
+  Plak dit als ÉÉN "Custom HTML"-blok (Gutenberg) of een "HTML"-element
+  (UX Builder) — vervang daarbij de volledige bestaande inhoud van de pagina.
+  Alle CSS-classes zitten in het theme; het kleine <style>-blok hieronder
+  voegt alleen wat extra's toe voor deze pagina (prefix .zv-).
+
+  Opbouw:
+    1. Hero — portaal live, inloggen / toegang aanvragen
+    2. Wat u in het portaal doet — 3 functies
+    3. Toegang aanvragen — 3 stappen
+    4. CTA-band
+-->
+
+<style>
+  .zv-hero .b2b-status .dot { background: var(--ac-success); }
+  .zv-hero .lead { margin: 0 0 28px; }
+  .zv-note { margin: 18px 0 0; font-size: 14px; color: var(--fg-3); }
+  .zv-url { flex: 1; margin-left: 8px; background: var(--ac-surface); border: 1px solid var(--ac-line); border-radius: var(--r-pill); padding: 3px 12px; font-family: var(--font-mono); font-size: 12px; color: var(--fg-2); display: flex; align-items: center; gap: 6px; }
+  .zv-url svg { color: var(--ac-success); }
+  .b2b-mock-stat .num { white-space: nowrap; }
+  .zv-steps .value-card-icon { font-family: var(--font-mono); font-weight: 700; font-size: 18px; }
+  @media (max-width: 480px) {
+    .b2b-mock-body { padding: 18px; }
+    .b2b-mock-stat { padding: 10px; }
+    .b2b-mock-stat .num { font-size: 18px; }
+  }
+</style>
+
+<!-- 1. Hero -->
+<section class="b2b-hero zv-hero">
+  <div class="shell">
+    <div class="b2b-hero-inner">
+      <div>
+        <div class="b2b-status"><span class="dot"></span>Live — voor bestaande klanten</div>
+        <h1>Het B2B-portaal voor uw inkoopafdeling.</h1>
+        <p class="lead">In het AerieCura B2B-portaal ziet u uw contractprijzen, plaatst u bestellingen en downloadt u compliance-documentatie — zonder telkens te bellen of mailen.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="https://b2b.aeriecura.nl/">Inloggen op het portaal →</a>
+          <a class="btn btn-ghost btn-lg" href="/contact/?onderwerp=b2b-toegang">Toegang aanvragen</a>
+        </div>
+        <p class="zv-note">Toegang is beschikbaar voor bestaande zakelijke klanten van AerieCura.</p>
+      </div>
+      <div class="b2b-mock" aria-hidden="true">
+        <div class="b2b-mock-bar">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="zv-url"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ac-icon" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>b2b.aeriecura.nl</span>
+        </div>
+        <div class="b2b-mock-body">
+          <div class="b2b-mock-row">
+            <div class="b2b-mock-stat"><div class="num">€ 8.420</div><div class="lbl">Open order</div></div>
+            <div class="b2b-mock-stat"><div class="num">14</div><div class="lbl">Artikelen</div></div>
+            <div class="b2b-mock-stat"><div class="num">24u</div><div class="lbl">Levering</div></div>
+          </div>
+          <div class="b2b-mock-line"><span class="ico">♥</span><span>Bloeddrukmeter BP-1860</span><span class="num">BP-1860</span><span class="qty">× 12</span></div>
+          <div class="b2b-mock-line"><span class="ico">🌡</span><span>Tympaanthermometer TM-2410</span><span class="num">TM-2410</span><span class="qty">× 8</span></div>
+          <div class="b2b-mock-line"><span class="ico">○</span><span>Saturatiemeter SO-110</span><span class="num">SO-110</span><span class="qty">× 20</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Functies -->
+<section class="section">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">In het portaal</span>
+        <h2>Alles voor uw inkoop op één plek.</h2>
+      </div>
+      <p class="lead">Praktische functionaliteit, geen featureoverkill. Gebouwd samen met onze grootste afnemers.</p>
+    </div>
+    <div class="b2b-features">
+      <div class="value-card">
+        <span class="value-card-icon">📋</span>
+        <h3>Contractprijzen op uw account</h3>
+        <p>Geen handmatige offertes meer. Uw staffelprijzen zijn direct zichtbaar in het portaal.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card-icon">🚚</span>
+        <h3>Bestelling herhalen in één klik</h3>
+        <p>Veelbestelde artikelen blijven bewaard, zodat u een eerdere bestelling snel opnieuw plaatst.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card-icon">📄</span>
+        <h3>Documentatie direct downloaden</h3>
+        <p>CE-verklaringen, IFU's en MDR-classificatie per artikel — altijd actueel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Toegang aanvragen -->
+<section class="section section-alt">
+  <div class="shell">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Toegang aanvragen</span>
+        <h2>Al klant? Zo krijgt u een account.</h2>
+      </div>
+      <p class="lead">Het portaal is beschikbaar voor zorginstellingen en praktijken die al bij AerieCura afnemen. Nog geen klant? Neem contact op, dan bespreken we eerst samen de mogelijkheden.</p>
+    </div>
+    <div class="b2b-features zv-steps">
+      <div class="value-card">
+        <span class="value-card-icon">1</span>
+        <h3>Vraag toegang aan</h3>
+        <p>Vul het contactformulier in met de naam van uw organisatie, uw klantnummer (indien bekend) en het e-mailadres waarmee u wilt inloggen.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card-icon">2</span>
+        <h3>Wij koppelen uw account</h3>
+        <p>We controleren uw aanvraag en koppelen het account aan uw organisatie en contractprijzen.</p>
+      </div>
+      <div class="value-card">
+        <span class="value-card-icon">3</span>
+        <h3>Inloggen en bestellen</h3>
+        <p>U ontvangt uw inloggegevens per e-mail en kunt direct aan de slag op b2b.aeriecura.nl.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CTA-band -->
+<section class="section">
+  <div class="shell">
+    <div class="cta-band">
+      <div>
+        <span class="eyebrow">B2B-portaal</span>
+        <h2>Direct aan de slag?</h2>
+        <p>Log in met uw zakelijke account, of vraag als bestaande klant toegang aan voor uzelf of een collega.</p>
+      </div>
+      <div class="cta-band-actions">
+        <a class="btn btn-on-deep btn-lg" href="https://b2b.aeriecura.nl/">Inloggen</a>
+        <a class="btn btn-outline-deep btn-lg" href="/contact/?onderwerp=b2b-toegang">Toegang aanvragen</a>
+      </div>
+    </div>
+  </div>
+</section>
