@@ -365,7 +365,7 @@ const WebshopsPage = ({ setRoute }) => {
     { icon: "heart-pulse", name: "Bloeddrukmeter.shop", domain: "bloeddrukmeter.shop", url: "https://bloeddrukmeter.shop",
       desc: "Onze consumentenwebshop voor bloeddrukmeters. Bovenarm en pols, voor thuisgebruik en de praktijk — met advies over de juiste keuze.", status: "live" },
     { icon: "stethoscope", name: "Rossmax.nl / Rossmax.shop", domain: "rossmax.nl · rossmax.shop", url: "https://rossmax.nl",
-      desc: "Het officiële verkoopkanaal voor Rossmax-diagnostiek in de Benelux. Bloeddrukmeters, saturatiemeters en thermometers.", status: "live" },
+      desc: "AerieCura is distributeur van Rossmax in acht Europese landen. Bloeddrukmeters, saturatiemeters en thermometers.", status: "live" },
     { icon: "activity", name: "Thuismonitoring.nl", domain: "thuismonitoring.nl", url: null, when: "Vanaf Q1 2027",
       desc: "Apparatuur en diensten voor monitoring op afstand en thuiszorg. Momenteel in ontwikkeling.", status: "soon" },
     { icon: "package", name: "Incontinentiemateriaal.nl", domain: "incontinentiemateriaal.nl", url: null, when: "Vanaf Q2 2027",
