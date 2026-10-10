@@ -1,14 +1,13 @@
-# Deploy-handleiding — GitHub → live site via WP Pusher
+# Deploy-handleiding — GitHub → live site via theme-zip
 
-Deze repo is de **bron** van het Flatsome child theme. Met de gratis plugin
-[WP Pusher](https://wppusher.com/) haal je wijzigingen van GitHub naar de live
-WordPress-site — met een **handmatige "Update now"-knop** als veiligheidscheck,
-zodat er nooit per ongeluk iets live gaat.
+Deze repo is de **bron** van het Flatsome child theme. Wijzigingen gaan live door
+een verse theme-zip te uploaden in WP-admin. Er draait geen plugin of koppeling
+met GitHub: er gaat pas iets live als jíj de zip uploadt.
 
 ```
-Jij zegt iets → Claude past code aan → commit → push naar GitHub
+Jij zegt iets → Claude past code aan → bouwt flatsome-aeriecura.zip → commit → push
                                                       │
-                                          (jij klikt "Update now" in WP Pusher)
+                                   (jij uploadt de zip in WP-admin)
                                                       ▼
                                                  Live website
 ```
@@ -17,7 +16,7 @@ Jij zegt iets → Claude past code aan → commit → push naar GitHub
 
 ## Belangrijk: wat wél en niet via deze route gaat
 
-| Via Git/WP Pusher (deze repo) | Níet via Git — staat in WordPress zelf |
+| Via de theme-zip (deze repo) | Níet via de zip — staat in WordPress zelf |
 |---|---|
 | Theme-code: templates, PHP, CSS, layout, kleuren | Paginateksten, nieuwsberichten, afbeeldingen |
 | Structuur van hero/footer/secties, shortcodes | Wat je in WP-admin typt of in UX Builder bouwt |
@@ -28,76 +27,40 @@ Kort: **"verander de knopkleur" of "voeg een footer-kolom toe"** = code = deze r
 
 ## Bron van waarheid
 
-WP Pusher installeert rechtstreeks vanuit de **broncode** in
-`handoff/flatsome-aeriecura/`. De `.zip`-bestanden in de repo-root zijn alléén
-voor handmatige upload als terugvaloptie — die worden door WP Pusher genegeerd.
-Na een code-wijziging worden de zips niet automatisch ververst; dat hoeft ook
-niet voor deze route.
+De broncode staat in `handoff/flatsome-aeriecura/`. De zip
+`flatsome-aeriecura.zip` in de repo-root is daar een afgeleide van en moet na
+**elke** code-wijziging opnieuw gebouwd worden — anders upload je een oude versie.
 
----
+### Zip bouwen
 
-## Eenmalige opzet (± 10 minuten, in WP-admin)
+Vanuit de repo-root:
 
-### Voorwaarden
-- Het **Flatsome parent-theme** is al geïnstalleerd en gelicentieerd op de site
-  (dit is een *child* theme — het kan niet zonder de parent).
-- Je hebt admin-toegang tot WordPress.
-- De site is bereikbaar vanaf internet (dat is een live site per definitie).
+```bash
+cd handoff && rm -f ../flatsome-aeriecura.zip && zip -qr ../flatsome-aeriecura.zip flatsome-aeriecura -x "*.DS_Store"
+```
 
-### Stap 1 — WP Pusher installeren
-1. Download de plugin-zip op <https://wppusher.com/> (gratis account → "Download").
-2. WP-admin → **Plugins → Nieuwe plugin → Plugin uploaden** → kies de zip → **Nu installeren** → **Activeren**.
-
-> De repo is **publiek**, dus je hoeft géén GitHub-token of account te koppelen.
-> Dat is alleen nodig voor privé-repos (betaalde WP Pusher-versie).
-
-### Stap 2 — Theme koppelen
-WP-admin → **WP Pusher → Install Theme** en vul exact in:
-
-| Veld | Waarde |
-|---|---|
-| Repository host | **GitHub** |
-| Repository | `patrickcrielaard/aeriecura-website` |
-| Repository branch | `main` |
-| Repository subdirectory | `handoff/flatsome-aeriecura` |
-| Push-to-Deploy | **uit laten** (zie hieronder) |
-| Link installation | optioneel aanvinken |
-
-Klik **Install theme**. WP Pusher haalt de broncode binnen en installeert het
-child theme.
-
-### Stap 3 — Activeren
-WP-admin → **Weergave → Thema's** → activeer **AerieCura (Flatsome child)**.
-
-> Stond er al een handmatig geüploade kopie van het theme? Verwijder die om
-> dubbele mappen te voorkomen — laat alleen de WP Pusher-versie staan.
+De zip bevat één map `flatsome-aeriecura/` met daarin `style.css` — dat is wat
+WordPress verwacht.
 
 ---
 
 ## Een wijziging live zetten (de dagelijkse flow)
 
-1. Je vraagt hier een aanpassing; ik wijzig de code, commit en push naar `main`.
-2. In WP-admin → **WP Pusher → Themes** zie je het theme staan.
-3. Klik **Update now**. WP Pusher haalt de nieuwste `main` op en vervangt het theme.
-4. Controleer de site. Klaar.
+1. Je vraagt hier een aanpassing; Claude wijzigt de code, bouwt de zip opnieuw,
+   commit en pusht naar `main`.
+2. WP-admin → **Weergave → Thema's → Nieuw thema → Thema uploaden**.
+3. Kies `flatsome-aeriecura.zip` → **Nu installeren**.
+4. WordPress ziet dat het thema al bestaat → klik **Vervang huidige met geüploade**.
+5. Controleer de site (hard refresh met Cmd+Shift+R, of leeg de cache van de
+   caching-plugin). Klaar.
 
-De knop is je veiligheidscheck: er gaat niets live tot jíj erop klikt.
+Instellingen en inhoud blijven staan; alleen de theme-bestanden worden vervangen.
+Gaat er iets mis, dan staat elke vorige versie in de git-geschiedenis.
 
----
-
-## Later: volautomatisch maken (optioneel)
-
-Wil je op termijn dat elke push meteen live gaat (zonder knop), zet dan
-**Push-to-Deploy** aan:
-
-1. WP Pusher → Themes → open het theme → vink **Push-to-Deploy** aan.
-2. WP Pusher toont een **Webhook-URL**.
-3. GitHub → repo **Settings → Webhooks → Add webhook** → plak de URL,
-   Content type `application/json`, event "Just the push event" → **Add webhook**.
-
-Vanaf dan deployt elke push naar `main` automatisch. Aangeraden om dit pas te
-doen als je het ritme vertrouwt — voor een medische-groothandel-site is de
-handmatige knop een prettige rem.
+### Voorwaarden
+- Het **Flatsome parent-theme** is geïnstalleerd en gelicentieerd op de site
+  (dit is een *child* theme — het kan niet zonder de parent).
+- Je hebt admin-toegang tot WordPress.
 
 ---
 
@@ -105,11 +68,11 @@ handmatige knop een prettige rem.
 
 | Symptoom | Oorzaak / oplossing |
 |---|---|
-| "Theme not found in repository" | Subdirectory-pad klopt niet — moet exact `handoff/flatsome-aeriecura` zijn. |
-| Theme is wit / parent ontbreekt | Flatsome parent-theme is niet geïnstalleerd of niet geactiveerd-baar. |
-| Twee AerieCura-thema's in de lijst | Oude handmatige upload nog aanwezig — verwijder de niet-WP-Pusher-versie. |
-| "Update now" doet niks | Cache/permalinks: ververs de WP Pusher-pagina; check of de push echt op `main` staat. |
-| Privé-repo nodig in de toekomst | Vereist betaalde WP Pusher + een GitHub personal access token in WP Pusher-instellingen. |
+| Wijziging niet zichtbaar na upload | Cache: hard refresh, of leeg de cache van de caching-plugin. Check ook of de zip na de wijziging opnieuw is gebouwd. |
+| Geen knop "Vervang huidige met geüploade" | De mapnaam in de zip wijkt af van het geïnstalleerde thema — moet `flatsome-aeriecura/` zijn. |
+| Theme is wit / parent ontbreekt | Flatsome parent-theme is niet geïnstalleerd of niet activeerbaar. |
+| "Het pakket kon niet worden geïnstalleerd. Het thema mist het stylesheet style.css." | Zip is verkeerd gebouwd (bijv. de bestanden zonder de map ervoor). Bouw opnieuw met het commando hierboven. |
+| Uploadlimiet overschreden | Vraag de hostingpartij de upload-limiet te verhogen, of upload de map via SFTP naar `wp-content/themes/`. |
 
 ---
 

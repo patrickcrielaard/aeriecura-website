@@ -1,7 +1,7 @@
 # WP-admin snippets — kant-en-klare HTML
 
 Plak-klare HTML voor de twee nieuwe v1.1-pagina's. Dit is **geen theme-code**
-(WP Pusher / de theme-zip negeert deze map) — het is bedoeld om handmatig in
+(de theme-zip bevat deze map niet) — het is bedoeld om handmatig in
 WordPress in een pagina te plakken.
 
 | Bestand | Pagina | Slug |

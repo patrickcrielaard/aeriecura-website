@@ -20,9 +20,9 @@ Dit pakket bevat alles wat nodig is om het HTML-prototype van AerieCura te verta
 
 ## Deployen vanaf GitHub
 
-Wijzigingen vanaf deze repo naar de live site brengen gaat via WP Pusher —
-zie **[`DEPLOY.md`](../DEPLOY.md)** in de repo-root voor de eenmalige opzet en
-de dagelijkse "Update now"-flow.
+Wijzigingen vanaf deze repo naar de live site brengen gaat door de theme-zip
+te uploaden in WP-admin — zie **[`DEPLOY.md`](../DEPLOY.md)** in de repo-root
+voor het bouwen van de zip en de uploadstappen.
 
 ## Voor Claude Code
 
