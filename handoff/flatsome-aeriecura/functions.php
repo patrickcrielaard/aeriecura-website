@@ -9,7 +9,8 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'AERIECURA_VERSION', '2.0.0' );
+// Enige bron van het versienummer is de Version-regel in style.css.
+define( 'AERIECURA_VERSION', wp_get_theme()->get( 'Version' ) );
 define( 'AERIECURA_PATH', get_stylesheet_directory() );
 define( 'AERIECURA_URL',  get_stylesheet_directory_uri() );
 

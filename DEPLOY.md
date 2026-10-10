@@ -46,8 +46,9 @@ WordPress verwacht.
 
 ## Een wijziging live zetten (de dagelijkse flow)
 
-1. Je vraagt hier een aanpassing; Claude wijzigt de code, bouwt de zip opnieuw,
-   commit en pusht naar `main`.
+1. Je vraagt hier een aanpassing; Claude wijzigt de code, verhoogt het
+   versienummer, werkt de changelog bij, bouwt de zip opnieuw, commit, zet een
+   versietag en pusht naar `main` (zie **Versiebeheer** hieronder).
 2. WP-admin → **Weergave → Thema's → Nieuw thema → Thema uploaden**.
 3. Kies `flatsome-aeriecura.zip` → **Nu installeren**.
 4. WordPress ziet dat het thema al bestaat → klik **Vervang huidige met geüploade**.
@@ -56,6 +57,35 @@ WordPress verwacht.
 
 Instellingen en inhoud blijven staan; alleen de theme-bestanden worden vervangen.
 Gaat er iets mis, dan staat elke vorige versie in de git-geschiedenis.
+
+Na de upload toont **Weergave → Thema's → AerieCura → Themadetails** het nieuwe
+versienummer. Zo zie je welke versie er live staat.
+
+---
+
+## Versiebeheer
+
+Bij **elke** theme-wijziging die live gaat:
+
+1. **Versienummer verhogen** in `handoff/flatsome-aeriecura/style.css`
+   (regel `Version:`). Dit is de enige plek; `functions.php` leest het daaruit.
+   Patch (x.y.**Z**) voor kleine correcties, minor (x.**Y**.0) voor nieuwe
+   onderdelen, major (**X**.0.0) voor een herbouw.
+2. **Changelog bijwerken** in
+   [`handoff/flatsome-aeriecura/CHANGELOG.md`](handoff/flatsome-aeriecura/CHANGELOG.md):
+   nieuwe kop `## <versie> — <datum>` bovenaan, met in gewone taal wat er
+   veranderd is.
+3. **Zip bouwen** (commando hierboven), committen en pushen.
+4. **Tag zetten** op die commit en pushen:
+
+   ```bash
+   git tag -a v2.1.1 -m "v2.1.1" && git push origin v2.1.1
+   ```
+
+Op GitHub zie je alle versies onder **Tags**, en het verschil tussen twee
+versies via `https://github.com/patrickcrielaard/aeriecura-website/compare/v2.1.0...v2.1.1`.
+Wijzigingen buiten het theme (prototype, documentatie, WP-admin-snippets)
+krijgen geen versienummer.
 
 ### Voorwaarden
 - Het **Flatsome parent-theme** is geïnstalleerd en gelicentieerd op de site
